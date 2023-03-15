@@ -1,0 +1,58 @@
+/* Base styling for all nodes */
+.node {
+    height: 28px;
+    width: 28px;
+    outline: 1px solid #d3d3d3; /* Light grey border for better visibility */
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth transition for background color changes */
+}
+
+/* Styling for the starting node */
+.node-start {
+    background-color: #4caf50; /* Green */
+}
+
+/* Styling for the finish node */
+.node-finish {
+    background-color: #f44336; /* Red */
+}
+
+/* Styling for wall nodes */
+.node-wall {
+    background-color: #2c3e50; /* Dark blue */
+    animation-name: wallNode;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+}
+
+/* Styling for nodes that are being explored */
+.node-explore {
+    background-color: #ffeb3b; /* Light yellow */
+    animation-name: exploreNode;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+/* Styling for nodes in the final path */
+.node-path {
+    background-color: #ff9800; /* Orange */
+}
+
+/* Keyframe animation for explored nodes */
+@keyframes exploreNode {
+    0% {
+        transform: scale(0.5);
+        border-radius: 50%; /* Circular shape */
+    }
+}
+
+/* Keyframe animation for wall nodes */
+@keyframes wallNode {
+    0% {
+        transform: scale(1.1); /* Slightly larger scale for effect */
+    }
+}

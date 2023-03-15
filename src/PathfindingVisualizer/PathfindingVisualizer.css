@@ -1,0 +1,156 @@
+/* Container for the grid */
+.grid {
+    margin-top: 30px; 
+    text-align: center; 
+}
+
+/* Style for rows with distinct spacing */
+.rows-distinct {
+    margin-top: -5px; 
+}
+
+/* Container for buttons */
+.button-container {
+    text-align: center; 
+    background-color: #f5f5f5; 
+    padding-left: 60px; 
+    height: 6%; 
+}
+
+/* General button styles */
+button {
+    margin: 15px 7px; 
+    padding: 12px; 
+    border: none; 
+    border-radius: 8px; 
+    color: #ffffff; 
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+/* Button styles for different contexts */
+.grid-buttons {
+    background-color: #4caf50; 
+}
+
+.algo-buttons {
+    background-color: #2196f3; 
+}
+
+.algo-buttons:hover {
+    background-color: #1976d2; 
+}
+
+.grid-buttons:hover {
+    background-color: #388e3c; 
+}
+
+.disabled-buttons {
+    opacity: 0.5; 
+    cursor: not-allowed; 
+}
+
+.additional-buttons {
+    background-color: #ff5722; 
+}
+
+.additional-buttons:hover {
+    background-color: #e64a19; 
+}
+
+/* Label styles */
+label {
+    color: #333333; 
+}
+
+/* Title bar styles */
+#bar-title {
+    color: #333333; 
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .button-container {
+        display: flex; 
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        align-items: center; 
+        justify-content: space-around; 
+        padding: 10px; 
+    }
+
+    #bar-title {
+        width: 75%; 
+        order: 1; 
+        border: 2px solid #333333; 
+        border-radius: 8px; 
+        padding: 10px; 
+        font-size: 18px; 
+    }
+
+    button {
+        width: 35%; 
+        order: 2; 
+        font-size: 16px; 
+    }
+
+    label {
+        order: 3; 
+        width: 33%; 
+        font-size: 16px; 
+    }
+}
+
+/* Media query for medium screens */
+@media (min-width: 601px) and (max-width: 1439px) {
+    .button-container {
+        display: flex; 
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        align-items: center; 
+        justify-content: space-around; 
+        padding: 10px; 
+    }
+
+    #bar-title {
+        width: 70%; 
+        order: 1; 
+        border: 2px solid #333333; 
+        border-radius: 8px; 
+        padding: 12px; 
+        letter-spacing: 1px; 
+        font-size: 20px; 
+    }
+
+    button {
+        width: 25%; 
+        order: 2; 
+        font-size: 16px; 
+    }
+
+    label {
+        order: 3; 
+        width: 45%; 
+        padding: 8px 0; 
+        font-size: 18px; 
+    }
+}
+
+/* Media query for large screens */
+@media (min-width: 1440px) {
+    .additional-buttons {
+        position: fixed; 
+        right: 30px; 
+        background-color: #ff5722; 
+        font-weight: 600; 
+    }
+
+    #bar-title {
+        position: fixed; 
+        left: 30px; 
+    }
+
+    label {
+        margin-left: 2%; 
+        margin-right: 2%; 
+    }
+}
