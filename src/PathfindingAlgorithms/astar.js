@@ -55,7 +55,7 @@ export function aStarSearch(grid, startRow, startCol, finishRow, finishCol, chec
     // Process nodes in the open list
     while (openList.length) {
         // Extract node with lowest f value
-        let [_, currentRow, currentCol] = openList.shift();
+        let [, currentRow, currentCol] = openList.shift();
         grid[currentRow][currentCol].isVisited = true;
         let newLevel = [];
 
